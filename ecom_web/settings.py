@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orders',
+    'users',
+    'products',
+    'wishlist',
+    'cart',
+    'comments',
+    'coupons',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +73,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = "users.User"
 
 WSGI_APPLICATION = 'ecom_web.wsgi.application'
 
