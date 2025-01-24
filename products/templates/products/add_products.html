@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="create-product-form-container">
+    <div class="form-helper">
+        <h1 class="form-header">Create a product</h1>
+        <form method="post" enctype="multipart/form-data" class="create-product-form">
+            {% csrf_token %}
+            <div class="fieldWrapper">
+                {{ form.name.errors }}
+                <label for="{{ form.name.id_for_label }}" class="create-product-label">{{ form.name.label }}</label>
+                {{ form.name }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.price.errors }}
+                <label for="{{ form.price.id_for_label }}" class="create-product-label">{{ form.price.label }}</label>
+                {{ form.price }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.description.errors }}
+                <label for="{{ form.description.id_for_label }}" class="create-product-label">{{ form.description.label }}</label>
+                {{ form.description }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.category.errors }}
+                <label for="{{ form.category.id_for_label }}" class="create-product-label">{{ form.category.label }}</label>
+                {{ form.category }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.colors.errors }}
+                <label for="{{ form.colors.id_for_label }}" class="create-product-label">{{ form.colors.label }}</label>
+                {{ form.colors }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.sizes.errors }}
+                <label for="{{ form.sizes.id_for_label }}" class="create-product-label">{{ form.sizes.label }}</label>
+                {{ form.sizes }}
+            </div>
+            <div class="form-btn-container">
+                <input type="submit" value="Submit" class="form-submit-btn">
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

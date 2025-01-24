@@ -8,9 +8,10 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.CharField(max_length=700, blank=True, null=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, related_name='products')
-    colors = models.ManyToManyField('Color', related_name='products')
-    sizes = models.ManyToManyField('Size', related_name='products')
+    colors = models.ManyToManyField('Color', related_name='products', blank=True)
+    sizes = models.ManyToManyField('Size', related_name='products', blank=True)
     views = models.PositiveIntegerField(default=0)
+    total_orders = models.PositiveIntegerField(default=0)
 
     @property
     def on_sale(self):
@@ -35,7 +36,7 @@ class Product(models.Model):
 
     
     def __str__(self):
-        return f'{self.name}-{self.price}'
+        return f'{self.name}-{self.price}--{self.sizes.all()}'
     
 
 class Category(models.Model):
