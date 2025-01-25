@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block content %}
+{% block forms %}
 <div class="create-product-form-container">
     <div class="form-helper">
         <h1 class="form-header">Create a product</h1>
@@ -10,6 +10,7 @@
                 <label for="{{ form.name.id_for_label }}" class="create-product-label">{{ form.name.label }}</label>
                 {{ form.name }}
             </div>
+
             <div class="fieldWrapper">
                 {{ form.price.errors }}
                 <label for="{{ form.price.id_for_label }}" class="create-product-label">{{ form.price.label }}</label>
@@ -40,7 +41,6 @@
             </div>
         </form>
     </div>
-
 </div>
 
 {% endblock %}

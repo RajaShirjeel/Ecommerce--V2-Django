@@ -28,12 +28,9 @@ class ProductImageForm(ModelForm):
     class Meta: 
         model = ProductImage
         fields = ['image', 'product']
-        labels = {
-            'product': 'name of product',
-        }
 
     product = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'Start typing to search...', 'class': 'add-product-input'})
+        widget=forms.TextInput(attrs={'placeholder': 'Start typing to search...', 'class': 'create-product-inputs', 'id': 'add-product-input'})
     )
 
     def clean_product(self):
