@@ -6,13 +6,12 @@
         <form method="post" enctype="multipart/form-data" class="create-product-form" autocomplete="off">
             {% csrf_token %}
             <div class="fieldWrapper">
-                {{ form.product.errors }}
                 <label for="{{ form.product.id_for_label }}" class="create-product-label">Product:</label>
                 {{ form.product }}
+                {{ form.product.errors }}
                 <div class="form-product-suggestions input-hidden">
                     <ul class="form-suggestion-list"></ul>
                 </div>
-                
             </div>
             <div class="fieldWrapper">
                 {{ form.image.errors }}

@@ -73,7 +73,8 @@
 .input-hidden{
     position: absolute;
     opacity: 0;
-    transform: translateY(-13rem);
+    visibility: hidden;
+    transform: translateY(-5rem)
 }
 
 .product-li-item{
@@ -90,3 +91,8 @@
     margin-bottom: 0;
 } 
 
+.errorlist{
+    color: red;
+    list-style: none;
+
+}

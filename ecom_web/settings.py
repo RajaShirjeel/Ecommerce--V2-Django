@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'cart',
     'comments',
     'coupons',
-    'dal',
-    'dal_select2',  
+    'home'
 ]
 
 MIDDLEWARE = [

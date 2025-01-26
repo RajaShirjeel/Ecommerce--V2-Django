@@ -15,6 +15,11 @@ const handleFocus = function(e){
 }
 
 
+const hideSuggestions = function() {
+    container.classList.add('input-hidden')
+}
+
+
 // make api call to django view
 const fetchResults = async function(query){
     try{
@@ -31,6 +36,12 @@ const fetchResults = async function(query){
         const {products} = content;
         console.log(products)
         list.innerHTML = ''
+        if (products.length == 0) {
+            hideSuggestions();
+            return;
+        }
+
+        if (productInput.value == '') hideSuggestions();
 
         products.forEach((p) => {
             const li = document.createElement('li');
@@ -40,10 +51,6 @@ const fetchResults = async function(query){
         })
 
         container.classList.remove('input-hidden');
-
-        list.addEventListener('click', (e) => {
-            productInput.value = e.target.textContent;
-        })
     }
     catch(e){
         console.log(e)
@@ -68,6 +75,11 @@ const handleDebounce = debounce((e) => {
     console.log(query)
     fetchResults(query);
 }, 300)
+
+
+list.addEventListener('click', (e) => {
+    productInput.value = e.target.textContent;
+})
 
 
 if (productInput){

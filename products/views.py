@@ -11,10 +11,6 @@ def create_product(request):
         product_form = ProductCreationForm(request.POST)
         if product_form.is_valid():
             product_form.save()
-        else:
-            return render(request, 'products/add_products.html')
-        return render(request, 'products/add_products.html')
-    
     else:
         product_form = ProductCreationForm()
     
@@ -28,7 +24,6 @@ def create_product_images(request):
 
         if image_form.is_valid():
             image_form.save()
-        return render(request, 'products/add_images.html')
 
     else:
         image_form = ProductImageForm()
