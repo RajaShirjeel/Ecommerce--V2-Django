@@ -1,0 +1,26 @@
+.nav-icon{
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.nav-icon:hover{
+    color: var(--element-color);
+}
+
+.searchbar-icon, .cart-icon{
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    right: 2rem;
+    top: 2rem;
+}
+
+.search-icon{
+    position: absolute;
+    font-size: 2.6rem;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding-left: 3rem;;
+}

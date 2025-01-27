@@ -1,0 +1,140 @@
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    color: var(--secondary-color);
+}
+
+.logo{
+   font-size: 2.5rem; 
+   letter-spacing: 0.2rem;
+}
+
+.nav-middle{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link:hover{
+    color: var(--element-color)
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav__categories--container{
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-width: 96%;
+    padding: 2.5rem 4rem;
+    top: 7rem;
+    transition: all 0.5s;
+}
+
+.nav__categories--items{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.nav__category-item{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.7rem;
+}
+
+.nav__category-item:hover{
+    color: var(--element-color)
+}
+
+.nav__searchbar{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    padding: 1rem;
+    height: 50vh;
+    transition: all 0.5s;
+
+}
+
+.nav__searchbar--container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+.nav__searchbar--content{
+   width: 50%;
+}
+
+.searchbar--input-icon{
+    position: relative;
+    width: 100%;
+}
+
+.searchbar{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    padding-right: 4rem;
+    font-size: 2.4rem;
+    width: 100%;
+
+}
+
+.searchbar:focus{
+    outline: none;
+    width: 100%;
+}
+
+.nav__searchbar-overlay{
+    position: absolute;
+    top: 50%;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    transition: all 0.1s;
+}
+
+.hide-searchbar{
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.hide-overlay{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.nav__cart__slider{
+    position: absolute;
+    background-color: white;
+    width: 48vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.hide-cart{
+    opacity: 0;
+    transform: translateX(100%);
+}

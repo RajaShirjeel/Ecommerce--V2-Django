@@ -1,6 +1,5 @@
 'use strict'
 
-
 const productInput = document.getElementById('add-product-input');
 const csrfToken = document.querySelector(`meta[name=csrf-token]`).getAttribute('content');
 const container = document.querySelector('.form-product-suggestions');
@@ -77,9 +76,11 @@ const handleDebounce = debounce((e) => {
 }, 300)
 
 
-list.addEventListener('click', (e) => {
-    productInput.value = e.target.textContent;
-})
+if (list) {
+    list.addEventListener('click', (e) => {
+        productInput.value = e.target.textContent;
+    })
+}
 
 
 if (productInput){

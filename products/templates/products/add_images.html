@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block product__js %}
+    <script defer src="{% static 'products/js/products.js' %}"></script>
+{% endblock %}
 {% block forms %}
 <div class="create-product-form-container">
     <div class="form-helper">

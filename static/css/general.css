@@ -3,3 +3,30 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --main-color: #FFFAEC;
+    --secondary-color: #3D3D3D;
+    --element-color: #578E7E;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    background-color: var(--main-color);
+    font-family: "Poppins", serif;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+}
+
+.hidden{
+    opacity: 0;
+}
+
