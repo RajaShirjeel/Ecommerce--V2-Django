@@ -1,0 +1,9 @@
+@media (max-width: 1024px){
+    .mobile__nav--container{
+        display: block;
+    }
+    
+    .nav-container{
+        display: none;
+    }
+}

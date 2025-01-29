@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo.webp' %}" />
     <link rel="stylesheet" href="{% static 'css/general.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav_queries.css' %}">
     <link rel="stylesheet" href="{% static 'css/icons.css' %}">
     <link rel="stylesheet" href="{% static 'users/users.css' %}">
     <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
@@ -25,7 +26,7 @@
 <body>
 
     {% block nav %}
-    <div class="container">
+    <div class="nav-container">
         <nav class="nav">
             <div class="nav-left">
                 <h1 class="logo">SHOPSPHERE&reg;</h1>
@@ -36,10 +37,10 @@
                 <a href="#" class="nav-link category-link">CATEGORIES</a>                
             </div>
             <div class="nav-right">
-                <ion-icon name="search-outline" class="nav-icon nav-search-icon"></ion-icon>
-                <ion-icon name="person-outline" class="nav-icon"></ion-icon>
-                <ion-icon name="cart-outline" class="nav-icon nav-cart-icon"></ion-icon>
-                <ion-icon name="heart-outline" class="nav-icon"></ion-icon>
+                <ion-icon name="search-outline" class="nav-icon nav-search-icon disable-blue-click"></ion-icon>
+                <ion-icon name="person-outline" class="nav-icon disable-blue-click"></ion-icon>
+                <ion-icon name="cart-outline" class="nav-icon nav-cart-icon disable-blue-click"></ion-icon>
+                <ion-icon name="heart-outline" class="nav-icon disable-blue-click"></ion-icon>
             </div>
             <div class="nav__categories--container hidden" inert>
                 <div class="nav__categories--items">
@@ -87,10 +88,10 @@
                 <div class="nav__searchbar--content">
                     <div class="searchbar--input-icon">
                         <input type="text" class="searchbar" placeholder="Search for Products...">
-                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                        <ion-icon name="search-outline" class="search-icon disable-blue-click"></ion-icon>
                     </div>
                 </div>
-                <ion-icon name="close-outline" class="searchbar-icon"></ion-icon>
+                <ion-icon name="close-outline" class="searchbar-icon disable-blue-click"></ion-icon>
             </div>
         </div>
         <div class="nav__searchbar-overlay hide-overlay" inert></div>
@@ -102,8 +103,56 @@
             </div>
         </div>
     </div>
+
+    <div class="mobile__nav--container">
+        <nav class="mobile__nav">
+            <div class="mobile__nav-left">
+                <h1 class="logo">SHOPSPHERE&reg;</h1>
+            </div>
+            <div class="mobile__nav-right">
+                <ion-icon name="search-outline" class="nav-icon nav-search-icon disable-blue-click"></ion-icon>
+                <ion-icon name="menu-outline" class="mobile__nav--icon disable-blue-click"></ion-icon>
+            </div>
+        </nav>
+
+        <div class="nav__searchbar hide-searchbar">
+            <div class="nav__searchbar--container">
+                <div class="nav__searchbar--content">
+                    <div class="searchbar--input-icon">
+                        <input type="text" class="searchbar" placeholder="Search for Products...">
+                        <ion-icon name="search-outline" class="search-icon disable-blue-click"></ion-icon>
+                    </div>
+                </div>
+                <ion-icon name="close-outline" class="searchbar-icon disable-blue-click"></ion-icon>
+            </div>
+        </div>
+
+        <div class="nav__searchbar-overlay hide-overlay" inert></div>
+
+        <div class="mobile__nav--modal hidden" inert>
+            <div class="mobile__nav__modal--container">
+                <div class="mobile__nav__link--container">
+                    <p class="mobile__nav--link">Account</p>
+                </div>
+
+                <div class="mobile__nav__link--container">
+                    <p class="mobile__nav--link">Categories</p>
+                </div>
+
+                <div class="mobile__nav__link--container">
+                    <p class="mobile__nav--link">Cart</p>
+                </div>
+
+                <div class="mobile__nav__link--container">
+                    <p class="mobile__nav--link">Wishlist</p>
+                </div>
+                <ion-icon name="close-outline" class="modal-cancel"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay hide"></div>
  
-        
     {% endblock %}
 
     {% block forms %}

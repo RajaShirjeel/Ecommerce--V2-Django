@@ -22,11 +22,10 @@ body{
     overflow: hidden;
 }
 
-.container{
-    width: 100%;
-}
-
 .hidden{
     opacity: 0;
 }
 
+.hide{
+    display: none;
+}
