@@ -68,7 +68,7 @@
     width: 100%;
     top: 0;
     padding: 1rem;
-    height: 50vh;
+    height: 50dvh;
     transition: all 0.5s;
 
 }
@@ -91,13 +91,16 @@
 }
 
 .searchbar{
+    -webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
     border: none;
     border-bottom: 1px solid black;
-    padding: 1rem;
+    padding-bottom: 0.5rem;
     padding-right: 4rem;
     font-size: 2.4rem;
     width: 100%;
-
+    border-radius:0;
 }
 
 .searchbar:focus{
@@ -148,7 +151,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
     color: var(--secondary-color);
 }
 
@@ -181,7 +184,8 @@
     height: 100%;
 }
 
-.mobile__nav__link--container{
+.mobile__nav__container-link{
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,8 +194,8 @@
     width: 40%;
 }
 
-.mobile__nav__link--container:active{
-    background-color: #34554c;
+.mobile__nav__container-link:active{
+    background-color: #467265;
 }
 
 .mobile__nav--link{

@@ -27,7 +27,8 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    padding-left: 3rem;;
+    padding-left: 3rem;
+    padding-bottom: 0.5rem;
 }
 
 .mobile__nav--icon{
