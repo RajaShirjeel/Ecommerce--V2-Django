@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block user__js %}
+    <script defer src="{% static 'user/js/user.js' %}"></script>
+{% endblock %}
+
+{% block forms %}
+<div class="container">
+    <form class="signup-form" method="post">
+        {% csrf_token %}
+        <div class="signup-form-heading--container">
+            <h1 class="heading-signup">Welcome to Shopsphere</h1>
+            <p class="signup-heading--text">Please enter your details to signup</p>
+        </div>
+        <div class="signup-from-field--container">
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ form.username }}
+                {{ form.username.errors }}
+
+            </div>
+            <div class="fieldWrapper">
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            <div class="fieldWrapper password-wrapper">
+                {{ form.password }}
+                {{ form.password.errors }}
+                <p class="p-hide">Show</p>
+            </div>  
+            <div class="signup-btn--container">
+                <button class="signup-btn" type="submit">Signup</button>
+                <p class="login-link--text">Already have an account? <a href="{% url 'user:login' %}" class="login--link">Login</a></p>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
