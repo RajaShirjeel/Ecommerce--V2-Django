@@ -8,27 +8,29 @@
 {% block forms %}
 <div class="container">
     <form class="signup-form" method="post">
-        {% csrf_token %}
-        <div class="signup-form-heading--container">
-            <h1 class="heading-signup">Welcome Back</h1>
-            <p class="signup-heading--text">Please enter your details to Login</p>
-        </div>
-        <div class="signup-from-field--container">
-            {{ form.non_field_errors }}
-            <div class="fieldWrapper">
-                {{ form.email }}
-                {{ form.email.errors }}
+        <div class="form--content">
+            {% csrf_token %}
+            <div class="signup-form-heading--container">
+                <h1 class="heading-signup">Welcome Back</h1>
+                <p class="signup-heading--text">Please enter your details to Login</p>
             </div>
-            <div class="fieldWrapper password-wrapper">
-                <div class="password-wrapper">
-                    {{ form.password }}
-                    <p class="p-hide">Show</p>
+            <div class="signup-from-field--container">
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper">
+                    {{ form.email }}
+                    {{ form.email.errors }}
                 </div>
-                {{ form.password.errors }}
-            </div>  
-            <div class="signup-btn--container">
-                <button class="signup-btn" type="submit">Login</button>
-                <p class="login-link--text">Don't have an account? <a href="{% url 'user:signup' %}" class="login--link">Signup</a></p>
+                <div class="fieldWrapper password-wrapper">
+                    <div class="password-wrapper">
+                        {{ form.password }}
+                        <p class="p-hide">Show</p>
+                    </div>
+                    {{ form.password.errors }}
+                </div>  
+                <div class="signup-btn--container">
+                    <button class="signup-btn" type="submit">Login</button>
+                    <p class="login-link--text">Don't have an account? <a href="{% url 'user:signup' %}" class="login--link">Signup</a></p>
+                </div>
             </div>
         </div>
     </form>

@@ -1,9 +1,16 @@
 .signup-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     padding: 3rem;
     border-radius: 14px;
-    /* height: 60vh; */
-    width: 25vw;
+    height: 60vh;
+    width: 35vw;
+}
+
+.form--content {
+    width: 100%;
 }
 
 .signup-form-heading--container {
@@ -72,7 +79,7 @@
 }
 
 .signup-btn:hover {
-    background-color: #0b5c2e;
+    background-color: var(--transi-btn-color);
 }
 
 .signup-btn:active {

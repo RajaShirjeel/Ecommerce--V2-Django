@@ -1,0 +1,68 @@
+@media (max-width:1281px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    .signup-form {
+        height: 60vh;
+        width: 45vw;
+    }
+    
+}
+
+@media (max-width:1025px) {
+
+    html {
+        font-size: 57%;
+    }
+
+}
+
+@media (max-width:961px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .signup-form {
+        height: 50vh;
+        width: 60vw;
+    }
+
+}
+
+@media (max-width:650px) {
+
+    html {
+        font-size: 52%;
+    }
+
+    .signup-form {
+        height: 60vh;
+        width: 76vw;
+    }
+
+}
+
+@media (max-width:481px)  {
+
+    html {
+        font-size: 45%;
+    }
+
+    .signup-form {
+        height: 60vh;
+        width: 76vw;
+    }
+}
+
+
+@media (max-width:380px) {
+
+    html {
+        font-size: 36%;
+    }
+}
+
+
